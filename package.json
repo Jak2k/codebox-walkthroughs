@@ -2,7 +2,7 @@
   "name": "codebox-walkthroughs",
   "displayName": "codebox-walkthroughs",
   "description": "",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": "https://github.com/jak2/codebox-walkthroughs",
   "engines": {
     "vscode": "^1.70.0"
