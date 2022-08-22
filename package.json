@@ -3,6 +3,7 @@
   "displayName": "codebox-walkthroughs",
   "description": "",
   "version": "0.0.1",
+  "repository": "https://github.com/jak2/codebox-walkthroughs",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -10,14 +11,76 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:codebox-walkthroughs.helloWorld"
+    "onCommand:codebox-walkthroughs.gettingStarted",
+    "onCommand:codebox-walkthroughs.markdownSample"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "codebox-walkthroughs.helloWorld",
-        "title": "Hello World"
+        "command": "codebox-walkthroughs.gettingStarted",
+        "title": "Get Started with Codebox"
+      },
+      {
+        "command": "codebox-walkthroughs.markdownSample",
+        "title": "Open Markdown Sample"
+      }
+    ],
+    "walkthroughs": [
+      {
+        "id": "gettingStarted",
+        "title": "Get Started with Codebox",
+        "description": "",
+        "steps": [
+          {
+            "id": "installCodebox",
+            "title": "Install Codebox",
+            "description": "Install the Codebox extension-pack from the Marketplace",
+            "completionEvents": [
+              "onExtensionInstalled:jak2k.codebox"
+            ],
+            "media": {
+              "image": "images/CodeboxMarketplace.png",
+              "altText": "Screenshot of the Marketplace"
+            }
+          },
+          {
+            "id": "openMarkdownPreview",
+            "title": "Open the Markdown preview",
+            "description": "Open the command palette and select 'Open Markdown Sample'",
+            "completionEvents": [
+              "onCommand:codebox-walkthroughs.markdownSample"
+            ],
+            "media": {
+              "image": "images/MarkdownPreview.png",
+              "altText": "Screenshot of the Markdown file"
+            }
+          },
+          {
+            "id": "liveshare",
+            "title": "Start Live Share",
+            "description": "Test the Live Share extension",
+            "completionEvents": [
+              "onCommand:liveshare.start"
+            ],
+            "media": {
+              "image": "images/LiveShare.png",
+              "altText": "Screenshot of the Live Share session"
+            }
+          },
+          {
+            "id": "conventionalCommits",
+            "title": "Get started with conventional commits",
+            "description": "Make changes and commit them with conventional commits (the ○ symbol in the source control view)",
+            "completionEvents": [
+              "onCommand:extension.conventionalCommits"
+            ],
+            "media": {
+              "image": "images/LiveShare.png",
+              "altText": "Screenshot of the Live Share session"
+            }
+          }
+        ]
       }
     ]
   },
