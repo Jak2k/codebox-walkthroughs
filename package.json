@@ -3,7 +3,7 @@
   "displayName": "codebox-walkthroughs",
   "publisher": "jak2k",
   "description": "",
-  "version": "4.0.0",
+  "version": "1.0.0",
   "repository": "https://github.com/jak2/codebox-walkthroughs",
   "engines": {
     "vscode": "^1.70.0"
